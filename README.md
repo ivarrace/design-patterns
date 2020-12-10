@@ -1,34 +1,65 @@
-# design-patterns
-Patrones de diseño en Java
+# Design patterns
 
-## Gang of Four Design Patterns
-### Creational Design Patterns
-- **Abstract Factory**. Allows the creation of objects without specifying their concrete type.
-- **Builder**. Uses to create complex objects.
-- **Factory Method**. Creates objects without specifying the exact class to create.
-- **Prototype**. Creates a new object from an existing object.
-- **Singleton**. Ensures only one instance of an object is created.
+En este proyecto se pueden ver ejemplos de código (en Java) aplicando cada uno de los patrones de diseño definidos en el libro [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns)
 
-### Structural Design Patterns
+## Estructura del proyecto
 
-- **Adapter**. Allows for two incompatible classes to work together by wrapping an interface around one of the existing classes.
-- **Bridge**. Decouples an abstraction so two classes can vary independently.
-- **Composite**. Takes a group of objects into a single object.
-- **Decorator**. Allows for an object’s behavior to be extended dynamically at run time.
-- **Facade**. Provides a simple interface to a more complex underlying object.
-- **Flyweight**. Reduces the cost of complex object models.
-- **Proxy**. Provides a placeholder interface to an underlying object to control access, reduce cost, or reduce complexity.
+El proyecto se estructura en paquetes que contienen cada uno de los patrones de diseño agrupados en las tres categorías definidas en el libro.
 
-### Behavior Design Patterns
+- Creational Design Patterns - `com.ivarrace.patterns.creational`
+- Structural Design Patterns - `com.ivarrace.patterns.structural`
+- Behavior Design Patterns - `com.ivarrace.patterns.behavior`
 
-- **Chain of Responsibility**. Delegates commands to a chain of processing objects.
-- **Command**. Creates objects which encapsulate actions and parameters.
-- **Interpreter**. Implements a specialized language.
-- **Iterator**. Accesses the elements of an object sequentially without exposing its underlying representation.
-- **Mediator**. Allows loose coupling between classes by being the only class that has detailed knowledge of their methods.
-- **Memento**. Provides the ability to restore an object to its previous state.
-- **Observer**. Is a publish/subscribe pattern which allows a number of observer objects to see an event.
-- **State**. Allows an object to alter its behavior when its internal state changes.
-- **Strategy**. Allows one of a family of algorithms to be selected on-the-fly at run-time.
-- **Template Method**. Defines the skeleton of an algorithm as an abstract class, allowing its sub-classes to provide concrete behavior.
-- **Visitor**. Separates an algorithm from an object structure by moving the hierarchy of methods into one object.
+En cada uno de estos, se encuentran los sub paquetes con la siguiente estructura:
+
+`{design-pattern}.examples.{example-name}`
+
+También se definen test unitarios para cada patrón (siguiendo la misma estructura de paquetes)
+
+## Ejecutando las pruebas
+
+Se pueden probar los patrones de dos formas:
+
+- Clase principal (Main): Cada ejemplo contiene una clase Main, que se podrá ejecutar y comprobar los resultados por `stdout`.
+- Test: Cada ejemplo se podrá probar con test unitarios (JUnit) para verificar su funcionamiento.
+
+## Contenido
+
+### [Creational Design Patterns](./src/main/java/com/ivarrace/patterns/creational)
+- **Abstract Factory**. Permite la creación de objetos sin especificar su tipo concreto.
+- **Builder**. Se utiliza para crear objetos complejos.
+- **Factory Method**. Crea objetos sin especificar la clase exacta a crear.
+- **Prototype**. Crea un nuevo objeto a partir de un objeto existente.
+- **Singleton**. Garantiza que solo se cree una instancia de un objeto.
+
+### [Structural Design Patterns](./src/main/java/com/ivarrace/patterns/structural)
+
+- **Adapter**. Permite que dos clases incompatibles trabajen juntas, definiendo una interfaz sobre una de las clases existentes.
+- **Bridge**. Desacopla una abstracción para que dos clases puedan variar de forma independiente.
+- **Composite**. Convierte un grupo de objetos en un solo objeto.
+- **Decorator**. Permite que el comportamiento de un objeto se amplíe dinámicamente en tiempo de ejecución.
+- **Facade**. Proporciona una interfaz sencilla para un objeto subyacente más complejo.
+- **Flyweight**. Reduce el costo de modelos de objetos complejos.
+- **Proxy**. Proporciona una interfaz de marcador de posición a un objeto subyacente para controlar el acceso, reducir los costos o reducir la complejidad.
+
+### [Behavior Design Patterns](./src/main/java/com/ivarrace/patterns/behavior)
+
+- **Chain of Responsibility**. Delega comandos a una cadena de objetos de procesamiento.
+- **Command**. Crea objetos que encapsulan acciones y parámetros.
+- **Interpreter**. Implementa un lenguaje especializado.
+- **Iterator**. Accede a los elementos de un objeto de forma secuencial sin exponer su representación subyacente.
+- **Mediator**. Permite un acoplamiento flexible entre clases al ser la única clase que tiene un conocimiento detallado de sus métodos.
+- **Memento**. Proporciona la capacidad de restaurar un objeto a su estado anterior.
+- **Observer**. Es un patrón de publicación/suscripción que permite que varios objetos observadores vean un evento.
+- **State**. Permite que un objeto altere su comportamiento cuando cambia su estado interno.
+- **Strategy**. Permite seleccionar un algoritmo sobre una familia en tiempo de ejecución.
+- **Template Method**. Define el esqueleto de un algoritmo como una clase abstracta, permitiendo que sus subclases proporcionen un comportamiento concreto.
+- **Visitor**. Separa un algoritmo de la estructura de un objeto al mover la jerarquía de métodos a un objeto.
+
+## Construido con
+
+- [Maven](https://maven.apache.org/) - Gestor de dependencias
+
+## Licencia
+
+[GPL-3.0](LICENSE)
